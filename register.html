@@ -24,9 +24,9 @@ body {
 class="absolute top-8 left-8 text-gray-400 hover:text-lime-400 transition text-sm">
 ← Back
 </button>
-
-<!-- REGISTER CARD -->
-<div class="bg-[#0f0f0f] border border-gray-800 rounded-3xl p-10 w-[380px] shadow-xl shadow-black/50">
+<form id="registerForm">
+  <!-- REGISTER CARD -->
+  <div class="bg-[#0f0f0f] border border-gray-800 rounded-3xl p-10 w-[380px] shadow-xl shadow-black/50">
 
 <h2 class="text-3xl font-bold mb-2">Create Account</h2>
 <p class="text-gray-400 mb-8 text-sm">Join NeedMore today</p>
@@ -59,5 +59,45 @@ Already have an account?
 </div>
 
 <script src="script.js"></script>
+<script type="module">
+
+import { auth, db } from "./firebase.js";
+import { createUserWithEmailAndPassword } 
+from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+import { doc, setDoc } 
+from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+document.getElementById("registerForm")
+.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const name = e.target.name.value;
+  const email = e.target.email.value;
+  const password = e.target.password.value;
+
+  try {
+    const userCredential =
+      await createUserWithEmailAndPassword(auth, email, password);
+
+    const user = userCredential.user;
+
+    // Save additional data in Firestore
+    await setDoc(doc(db, "users", user.uid), {
+      name,
+      email,
+      role: "user",
+      createdAt: new Date()
+    });
+
+    alert("Registered Successfully!");
+    window.location.href = "dashboard.html";
+
+  } catch (error) {
+    alert(error.message);
+  }
+});
+
+</script>
 </body>
 </html>
