@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register - NeedMore</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+</style>
+</head>
+
+<body class="bg-[#050505] text-white min-h-screen flex items-center justify-center relative">
+
+<!-- BACK BUTTON -->
+<button onclick="window.history.back()"
+class="absolute top-8 left-8 text-gray-400 hover:text-lime-400 transition text-sm">
+← Back
+</button>
+
+<!-- REGISTER CARD -->
+<div class="bg-[#0f0f0f] border border-gray-800 rounded-3xl p-10 w-[380px] shadow-xl shadow-black/50">
+
+<h2 class="text-3xl font-bold mb-2">Create Account</h2>
+<p class="text-gray-400 mb-8 text-sm">Join NeedMore today</p>
+
+<input id="name"
+type="text"
+placeholder="Full Name"
+class="w-full mb-5 px-4 py-3 rounded-xl bg-[#111] border border-gray-700 focus:border-lime-400 focus:outline-none transition">
+
+<input id="email"
+type="email"
+placeholder="Email"
+class="w-full mb-5 px-4 py-3 rounded-xl bg-[#111] border border-gray-700 focus:border-lime-400 focus:outline-none transition">
+
+<input id="password"
+type="password"
+placeholder="Password"
+class="w-full mb-6 px-4 py-3 rounded-xl bg-[#111] border border-gray-700 focus:border-lime-400 focus:outline-none transition">
+
+<button onclick="registerUser()"
+class="w-full bg-lime-400 text-black py-3 rounded-xl font-semibold hover:scale-105 transition duration-300">
+Create Account
+</button>
+
+<p class="text-gray-400 text-sm mt-6 text-center">
+Already have an account?
+<a href="login.html" class="text-lime-400 hover:underline">Login</a>
+</p>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
