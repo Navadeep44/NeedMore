@@ -1,197 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Become a Captain - NeedMore</title>
 
-<!-- Premium Font -->
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <!-- ================= META ================= -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Become a Captain - NeedMore</title>
 
-<!-- Tailwind -->
-<script src="https://cdn.tailwindcss.com"></script>
+  <!-- ================= FONT ================= -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-<!-- Icons -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <!-- ================= TAILWIND ================= -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-<style>
-body { font-family: 'Plus Jakarta Sans', sans-serif; }
-</style>
+  <!-- ================= ICONS ================= -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+  </style>
 
 </head>
 
-<body class="bg-black text-white min-h-screen flex items-center justify-center relative">
+<body class="bg-black text-white min-h-screen flex items-center justify-center relative p-6">
 
-<!-- BACK BUTTON -->
-<a href="index.html"
-class="absolute top-8 left-8 text-gray-400 hover:text-white transition flex items-center gap-2">
-<i class="fa-solid fa-arrow-left"></i>
-Back
-</a>
+  <!-- ================= BACK BUTTON ================= -->
+  <a href="index.html"
+     class="absolute top-8 left-8 text-gray-400 hover:text-white transition flex items-center gap-2">
+    <i class="fa-solid fa-arrow-left"></i>
+    Back
+  </a>
 
-<!-- FORM CONTAINER -->
-<div class="bg-[#0f0f0f] border border-gray-800 rounded-3xl p-12 w-full max-w-4xl">
+  <!-- ================= FORM CONTAINER ================= -->
+  <div class="bg-[#0f0f0f] border border-gray-800 rounded-3xl p-12 w-full max-w-4xl">
 
-<h1 class="text-5xl font-extrabold text-center mb-4">
-Become a Captain
-</h1>
+    <h1 class="text-5xl font-extrabold text-center mb-4">
+      Become a Captain
+    </h1>
 
-<p class="text-gray-400 text-center mb-10">
-Join our fleet and start earning with flexible schedules
-</p>
+    <p class="text-gray-400 text-center mb-10">
+      Join our fleet and start earning with flexible schedules
+    </p>
 
-<form class="space-y-6">
+    <!-- ================================================= -->
+    <!-- SINGLE CAPTAIN FORM -->
+    <!-- ================================================= -->
+    <form id="captainForm" class="space-y-6">
 
-<!-- ROW 1 -->
-<div class="grid md:grid-cols-2 gap-6">
+      <!-- ROW 1 -->
+      <div class="grid md:grid-cols-2 gap-6">
 
-<div>
-<label class="text-sm text-gray-400">Full Name *</label>
-<div class="relative mt-2">
-<i class="fa-solid fa-user absolute left-4 top-4 text-gray-500"></i>
-<input type="text"
-class="w-full bg-black border border-gray-700 rounded-xl pl-12 pr-4 py-4 focus:border-lime-400 focus:outline-none"
-placeholder="Enter your name">
-</div>
-</div>
+        <div>
+          <label class="text-sm text-gray-400">Full Name *</label>
+          <div class="relative mt-2">
+            <i class="fa-solid fa-user absolute left-4 top-4 text-gray-500"></i>
+            <input name="name" type="text" required
+              class="w-full bg-black border border-gray-700 rounded-xl pl-12 pr-4 py-4 focus:border-lime-400 focus:outline-none"
+              placeholder="Enter your name">
+          </div>
+        </div>
 
-<div>
-<label class="text-sm text-gray-400">Phone Number *</label>
-<div class="relative mt-2">
-<i class="fa-solid fa-phone absolute left-4 top-4 text-gray-500"></i>
-<input type="text"
-class="w-full bg-black border border-gray-700 rounded-xl pl-12 pr-4 py-4 focus:border-lime-400 focus:outline-none"
-placeholder="+91 9999999999">
-</div>
-</div>
+        <div>
+          <label class="text-sm text-gray-400">Phone Number *</label>
+          <div class="relative mt-2">
+            <i class="fa-solid fa-phone absolute left-4 top-4 text-gray-500"></i>
+            <input name="phone" type="text" required
+              class="w-full bg-black border border-gray-700 rounded-xl pl-12 pr-4 py-4 focus:border-lime-400 focus:outline-none"
+              placeholder="+91 9999999999">
+          </div>
+        </div>
 
-</div>
+      </div>
 
-<!-- ROW 2 -->
-<div class="grid md:grid-cols-2 gap-6">
+      <!-- ROW 2 -->
+      <div class="grid md:grid-cols-2 gap-6">
 
-<div>
-<label class="text-sm text-gray-400">Email Address *</label>
-<div class="relative mt-2">
-<i class="fa-solid fa-envelope absolute left-4 top-4 text-gray-500"></i>
-<input type="email"
-class="w-full bg-black border border-gray-700 rounded-xl pl-12 pr-4 py-4 focus:border-lime-400 focus:outline-none"
-placeholder="you@example.com">
-</div>
-</div>
+        <div>
+          <label class="text-sm text-gray-400">Email Address *</label>
+          <div class="relative mt-2">
+            <i class="fa-solid fa-envelope absolute left-4 top-4 text-gray-500"></i>
+            <input name="email" type="email" required
+              class="w-full bg-black border border-gray-700 rounded-xl pl-12 pr-4 py-4 focus:border-lime-400 focus:outline-none"
+              placeholder="you@example.com">
+          </div>
+        </div>
 
-<div>
-<label class="text-sm text-gray-400">City *</label>
-<div class="relative mt-2">
-<i class="fa-solid fa-location-dot absolute left-4 top-4 text-gray-500"></i>
-<input type="text"
-class="w-full bg-black border border-gray-700 rounded-xl pl-12 pr-4 py-4 focus:border-lime-400 focus:outline-none"
-value="Hyderabad">
-</div>
-</div>
+        <div>
+          <label class="text-sm text-gray-400">City *</label>
+          <div class="relative mt-2">
+            <i class="fa-solid fa-location-dot absolute left-4 top-4 text-gray-500"></i>
+            <input name="city" type="text" required
+              class="w-full bg-black border border-gray-700 rounded-xl pl-12 pr-4 py-4 focus:border-lime-400 focus:outline-none"
+              value="Hyderabad">
+          </div>
+        </div>
 
-</div>
+      </div>
 
-<!-- ROW 3 -->
-<div class="grid md:grid-cols-2 gap-6">
+      <!-- ROW 3 -->
+      <div class="grid md:grid-cols-2 gap-6">
 
-<div>
-<label class="text-sm text-gray-400">Vehicle Type *</label>
-<div class="relative mt-2">
-<i class="fa-solid fa-car absolute left-4 top-4 text-gray-500"></i>
-<input type="text"
-class="w-full bg-black border border-gray-700 rounded-xl pl-12 pr-4 py-4 focus:border-lime-400 focus:outline-none"
-placeholder="Bike, Scooter, Car">
-</div>
-</div>
+        <div>
+          <label class="text-sm text-gray-400">Vehicle Type *</label>
+          <div class="relative mt-2">
+            <i class="fa-solid fa-car absolute left-4 top-4 text-gray-500"></i>
+            <input name="vehicle" type="text" required
+              class="w-full bg-black border border-gray-700 rounded-xl pl-12 pr-4 py-4 focus:border-lime-400 focus:outline-none"
+              placeholder="Bike, Scooter, Car">
+          </div>
+        </div>
 
-<div>
-<label class="text-sm text-gray-400">License Number *</label>
-<div class="relative mt-2">
-<i class="fa-solid fa-id-card absolute left-4 top-4 text-gray-500"></i>
-<input type="text"
-class="w-full bg-black border border-gray-700 rounded-xl pl-12 pr-4 py-4 focus:border-lime-400 focus:outline-none"
-placeholder="Enter license number">
-</div>
-</div>
+        <div>
+          <label class="text-sm text-gray-400">License Number *</label>
+          <div class="relative mt-2">
+            <i class="fa-solid fa-id-card absolute left-4 top-4 text-gray-500"></i>
+            <input name="license" type="text" required
+              class="w-full bg-black border border-gray-700 rounded-xl pl-12 pr-4 py-4 focus:border-lime-400 focus:outline-none"
+              placeholder="Enter license number">
+          </div>
+        </div>
 
-</div>
+      </div>
 
-<!-- ROW 4 -->
-<div>
-<label class="text-sm text-gray-400">Driving Experience *</label>
-<input type="text"
-class="w-full bg-black border border-gray-700 rounded-xl px-4 py-4 mt-2 focus:border-lime-400 focus:outline-none"
-placeholder="e.g., 5 years">
-</div>
+      <!-- ROW 4 -->
+      <div>
+        <label class="text-sm text-gray-400">Driving Experience *</label>
+        <input name="experience" type="text" required
+          class="w-full bg-black border border-gray-700 rounded-xl px-4 py-4 mt-2 focus:border-lime-400 focus:outline-none"
+          placeholder="e.g., 5 years">
+      </div>
 
-<!-- ROW 5 -->
-<div>
-<label class="text-sm text-gray-400">Identity Proof (Aadhaar / Voter ID) *</label>
-<input type="text"
-class="w-full bg-black border border-gray-700 rounded-xl px-4 py-4 mt-2 focus:border-lime-400 focus:outline-none"
-placeholder="Enter ID number">
-</div>
+      <!-- ROW 5 -->
+      <div>
+        <label class="text-sm text-gray-400">Identity Proof *</label>
+        <input name="identity" type="text" required
+          class="w-full bg-black border border-gray-700 rounded-xl px-4 py-4 mt-2 focus:border-lime-400 focus:outline-none"
+          placeholder="Aadhaar / Voter ID">
+      </div>
 
-<!-- SUBMIT -->
-<button type="submit"
-class="w-full bg-lime-400 text-black font-semibold py-4 rounded-xl text-lg hover:scale-105 transition">
-Submit Application
-</button>
+      <!-- SUBMIT BUTTON -->
+      <button type="submit"
+        class="w-full bg-lime-400 text-black py-4 rounded-xl font-bold text-lg hover:scale-105 transition duration-300">
+        Apply Now
+      </button>
 
-</form>
+    </form>
 
-<!-- REQUIREMENTS BOX -->
-<div class="mt-10 bg-black border border-gray-800 rounded-2xl p-6">
+    <!-- ================= REQUIREMENTS BOX ================= -->
+    <div class="mt-10 bg-black border border-gray-800 rounded-2xl p-6">
+      <h3 class="font-semibold mb-4">Requirements:</h3>
+      <ul class="text-gray-400 text-sm space-y-2">
+        <li>• Valid Driving License</li>
+        <li>• Aadhaar or Voter ID</li>
+        <li>• Vehicle RC & Insurance</li>
+        <li>• Age 18+</li>
+        <li>• Smartphone with internet</li>
+      </ul>
+    </div>
 
-<h3 class="font-semibold mb-4">Requirements:</h3>
+  </div>
 
-<ul class="text-gray-400 text-sm space-y-2">
-<li>• Valid Driving License</li>
-<li>• Aadhaar or Voter ID</li>
-<li>• Vehicle RC & Insurance</li>
-<li>• Age 18+</li>
-<li>• Smartphone with internet</li>
-</ul>
+  <!-- ================= FIREBASE SCRIPT ================= -->
+  <script type="module">
 
-</div>
+    import { db } from "./firebase.js";
+    import { addDoc, collection }
+    from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
-</div>
-<script type="module">
+    document.getElementById("captainForm")
+    .addEventListener("submit", async (e) => {
 
-import { db } from "./firebase.js";
-import { addDoc, collection }
-from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+      e.preventDefault();
 
-document.getElementById("captainForm")
-.addEventListener("submit", async (e) => {
+      const data = {
+        name: e.target.name.value,
+        phone: e.target.phone.value,
+        email: e.target.email.value,
+        city: e.target.city.value,
+        vehicle: e.target.vehicle.value,
+        license: e.target.license.value,
+        experience: e.target.experience.value,
+        identity: e.target.identity.value,
+        status: "Pending",
+        createdAt: new Date()
+      };
 
-  e.preventDefault();
+      try {
 
-  const name = e.target.name.value;
-  const phone = e.target.phone.value;
-  const vehicle = e.target.vehicle.value;
+        await addDoc(collection(db, "captainApplications"), data);
 
-  try {
+        alert("Application submitted successfully!");
+        e.target.reset();
 
-    await addDoc(collection(db, "captainApplications"), {
-      name,
-      phone,
-      vehicle,
-      status: "Pending",
-      createdAt: new Date()
+      } catch (error) {
+
+        alert(error.message);
+
+      }
+
     });
 
-    alert("Application submitted successfully!");
-    e.target.reset();
-
-  } catch (error) {
-    alert(error.message);
-  }
-
-});
-
-</script>
+  </script>
 
 </body>
 </html>
